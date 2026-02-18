@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: smartparking-postgres
+    environment:
+      POSTGRES_DB: smartparking
+      POSTGRES_USER: sp_user
+      POSTGRES_PASSWORD: sp_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - smartparking-postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  smartparking-postgres-data:
+

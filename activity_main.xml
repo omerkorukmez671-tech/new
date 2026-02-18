@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:text="Organization Manager"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Organization Name -->
+    <EditText
+        android:id="@+id/editOrgName"
+        android:hint="Organization Name"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/editOrgDescription"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoParentOrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birim Seçiniz..."
+        android:inputType="text"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        android:imeOptions="actionDone"
+        android:singleLine="true" />
+
+    <!-- CRUD Buttons -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:text="Ekle"
+            app:icon="@android:drawable/ic_menu_save" />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:text="Güncelle"
+            app:icon="@android:drawable/ic_menu_edit" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1"
+            android:text="Sil"
+            app:icon="@android:drawable/ic_menu_delete" />
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <!-- ListView -->
+    <ListView
+        android:id="@+id/listOrganizations"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

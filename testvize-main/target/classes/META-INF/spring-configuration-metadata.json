@@ -1,0 +1,18 @@
+{
+  "groups": [
+    {
+      "name": "parking",
+      "type": "com.example.smartparking.config.ParkingConfigProperties",
+      "sourceType": "com.example.smartparking.config.ParkingConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "parking.max-capacity",
+      "type": "java.lang.Integer",
+      "description": "Aynı anda izin verilen maksimum aktif park oturumu sayısı.",
+      "sourceType": "com.example.smartparking.config.ParkingConfigProperties"
+    }
+  ],
+  "hints": []
+}
